@@ -11,6 +11,7 @@ mongoose
   .then(() => console.log("connected to mongo"))
   .catch((err) => console.log(err));
 
+app.set("trust proxy", 1);
 app.use(cors(process.env.CLIENT_URL));
 
 app.use(express.json());
