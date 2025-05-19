@@ -26,6 +26,9 @@ app.use(function (req, res, next) {
 app.use(express.json());
 
 app.use("/jobs", postingRoute);
+app.get("/", (req, res) => {
+  res.send("hello vercel!");
+});
 
 const PORT = process.env.PORT || 3000;
 app.listen(3000, () => console.log(`Server running on port: ${PORT}`));

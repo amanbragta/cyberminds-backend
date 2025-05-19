@@ -27,5 +27,5 @@ export const addPosting = async (req, res) => {
 
 export const getPostings = async (req, res) => {
   const postings = await Posting.find();
-  res.send(postings);
+  res.status(200).send(postings);
 };
