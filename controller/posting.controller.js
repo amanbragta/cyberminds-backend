@@ -22,7 +22,7 @@ export const addPosting = async (req, res) => {
     image,
   });
   const savePosting = await newPosting.save();
-  res.send(savePosting);
+  res.status(200).send(savePosting);
 };
 
 export const getPostings = async (req, res) => {
